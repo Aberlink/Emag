@@ -7,6 +7,6 @@ class ArticleList(generics.ListCreateAPIView):
     serializer_class = ArticleSerializer
 
 
-class ArticleDetail(generics.RetrieveDestroyAPIView):
+class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
