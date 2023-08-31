@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     "blog",
     "api",
     "rest_framework",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -130,4 +132,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #         'rest_framework.permissions.AllowAny'
 #     ]
 # }
+
+# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Replace with your frontend URL
+]
 
