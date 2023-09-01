@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "api",
     "rest_framework",
     'corsheaders',
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -133,9 +134,18 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #     ]
 # }
 
-# CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000"
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Emag',
+    # 'DESCRIPTION': 'interview project',
+    # 'VERSION': '1.0.0',
+    # 'SERVE_INCLUDE_SCHEMA': False,
+}
