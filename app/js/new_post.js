@@ -1,5 +1,10 @@
 const articleForm = document.getElementById('article-form');
 
+const username = localStorage.getItem('username');
+const password = localStorage.getItem('password');
+
+const auth = 'Basic ' + btoa(username + ':' + password);
+
 articleForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -16,6 +21,7 @@ articleForm.addEventListener('submit', async (event) => {
     const response = await fetch('http://localhost:8000/api/v1/article/', {
         method: 'POST',
         headers: {
+            'Authorization': auth,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(reqyestBody),
