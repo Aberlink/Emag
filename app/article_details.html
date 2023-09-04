@@ -35,7 +35,7 @@
     
                 titleElement.textContent = article.title;
                 contentElement.textContent = article.content;
-                authorElement.textContent = `Author: ${article.author}`;
+                authorElement.textContent = `Author: ${article.author_email}`;
                 publishedElement.textContent = `Published: ${formatDatetime(article.published)}`; // Format the datetime
             })
             .catch(error => {

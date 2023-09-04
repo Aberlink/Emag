@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Emag",
-    # 'DESCRIPTION': 'interview project',
-    # 'VERSION': '1.0.0',
-    # 'SERVE_INCLUDE_SCHEMA': False,
+    'DESCRIPTION': 'interview project',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
