@@ -17,7 +17,6 @@ read them, edit and delete.
     You can access admin panel by running:
     `http://localhost:8000/admin/`
 
-
     read articles(all visitors) and add new one(only logged user):
     `http://localhost:8000/api/v1/article/`
 
