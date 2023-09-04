@@ -13,7 +13,6 @@ read them, edit and delete.
 ### 2. start django server:
     `python manage.py runserver`
 
-
 ### 3. endpoints:
     You can access admin panel by running:
     `http://localhost:8000/admin/`
