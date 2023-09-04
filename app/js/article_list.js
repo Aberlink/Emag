@@ -1,5 +1,5 @@
 const articleListElement = document.getElementById('article-list');
-        fetch('http://localhost:8000/api/') 
+        fetch('http://localhost:8000/api/v1/article/') 
             .then(response => response.json())
             .then(data => {
                 data.forEach(article => {

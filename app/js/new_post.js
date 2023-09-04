@@ -13,7 +13,7 @@ articleForm.addEventListener('submit', async (event) => {
         content: content,
     };
 
-    const response = await fetch('http://localhost:8000/api/', {
+    const response = await fetch('http://localhost:8000/api/v1/article/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
