@@ -42,3 +42,6 @@ read them, edit and delete.
 ### 5. run tests:
     `pytest -v -s`
 
+### 6. run docker:
+    'docker build -t blog-app . && docker run -p 8000:8000 -d --name blog-app blog-app'
+
