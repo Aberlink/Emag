@@ -1,0 +1,3 @@
+python manage.py runserver
+pytest -v -s
+http-server -p 3000

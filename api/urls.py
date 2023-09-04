@@ -1,11 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 
 from .views import ArticleList, ArticleDetail
 
-app_name = 'api'
+app_name = "api/v1"
 
 urlpatterns = [
-    path('', ArticleList.as_view(), name='listcreate'),
-    path('<int:pk>/', ArticleDetail.as_view(), name='detailcreate'),
-    
+    path("article/", ArticleList.as_view(), name="listcreate"),
+    path("article/<int:pk>/", ArticleDetail.as_view(), name="detailcreate"),
 ]

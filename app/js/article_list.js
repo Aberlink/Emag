@@ -1,5 +1,5 @@
 const articleListElement = document.getElementById('article-list');
-        fetch('http://localhost:8000/api/') 
+        fetch('http://localhost:8000/api/v1/article/') 
             .then(response => response.json())
             .then(data => {
                 data.forEach(article => {
@@ -9,7 +9,7 @@ const articleListElement = document.getElementById('article-list');
                     link.href = `article_details.html?id=${article.id}`;
                     listItem.appendChild(link);
     
-                    const authorText = document.createTextNode(`, Author: ${article.author}`);
+                    const authorText = document.createTextNode(`, Author: ${article.author_email}`);
                     listItem.appendChild(authorText);
     
                     articleListElement.appendChild(listItem);

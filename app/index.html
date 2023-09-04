@@ -6,6 +6,24 @@
 </head>
 <body>
     <div class="container mt-5">
+        <h2 class="mb-4">Login</h2>
+        <form id="login-form">
+            <div class="mb-3">
+                <label for="username" class="form-label" >Username:</label>
+                <input type="text" id="username" name="username" class="form-label" required >
+            </div>
+
+            <div class="mb-3">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+    <div class="container mt-5">
         <h2 class="mb-4">Create New Article</h2>
         <form id="article-form">
             <div class="mb-3">
@@ -31,6 +49,7 @@
     </div>
 
     <script src="js/new_post.js"></script>
+    <script src="js/login_form.js"></script>
     <script src="js/article_list.js"></script>
 </body>
 </html>

@@ -1,1 +1,1 @@
-# emag
+sample blog project, including drf and simple html page.
