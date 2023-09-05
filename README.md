@@ -42,6 +42,8 @@ read them, edit and delete. As article was created by user, option to change aut
     - login: user1
     - password: example123
 
+    **At current state it is not recommended to use it, to test functionality use django visualization (access server directly)**
+
 ### 5. run tests:
     `pytest -v -s`
 
