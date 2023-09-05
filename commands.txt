@@ -1,3 +1,4 @@
 python manage.py runserver
 pytest -v -s
 http-server -p 3000
+docker build -t blog-app . && docker run -p 8000:8000 -d --name blog-app blog-app
