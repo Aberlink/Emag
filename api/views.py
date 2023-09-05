@@ -23,9 +23,13 @@ class ArticleList(generics.ListCreateAPIView):
     permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
-
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+ 
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView, EditPostPermision):
     permission_classes = [EditPostPermision]
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
+    def perform_update(self, serializer):
+        serializer.save(author=self.request.user)

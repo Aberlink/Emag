@@ -1,7 +1,10 @@
 sample blog project, including drf and simple html page. Articles are stored in default django db, users can add new articles,
-read them, edit and delete.
+read them, edit and delete. As article was created by user, option to change author is locked, it has to remain the same.
 
 ## usage:
+
+### 0. create conda env:
+    `conda create --name <env> --file requirements_conda.txt
 
 ### 1. create admin acount:
     `python manage.py createsuperuser`
@@ -43,5 +46,8 @@ read them, edit and delete.
     `pytest -v -s`
 
 ### 6. run docker:
-    'docker build -t blog-app . && docker run -p 8000:8000 -d --name blog-app blog-app'
+    first time:
+        - 'docker build -t blog-app . && docker run -p 8000:8000 -d --name blog-app blog-app'
+    than:
+        - 'docker start  blog-app'
 

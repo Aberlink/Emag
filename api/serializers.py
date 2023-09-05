@@ -4,7 +4,7 @@ from blog.models import Article
 
 
 class ArticleSerializer(serializers.ModelSerializer):
-    author_email = serializers.EmailField(source='author.username', read_only=True)
+    author_login = serializers.EmailField(source='author.username', read_only=True)
 
     class Meta:
         model = Article
