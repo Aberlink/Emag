@@ -3,8 +3,7 @@ read them, edit and delete. As article was created by user, option to change aut
 
 ## usage:
 
-### 0. create conda env:
-    `conda create --name <env> --file requirements_conda.txt
+### 0. create venv with conda or venv using requirements files
 
 ### 1. create admin acount:
     `python manage.py createsuperuser`
