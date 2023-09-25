@@ -109,7 +109,7 @@ def test_article_post_unauthenticated(sample_article, unauthenticated_client):
     response = unauthenticated_client.post(
         reverse(list_url), sample_article, format="json"
     )
-    assert response.status_code == status.HTTP_403_FORBIDDEN
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
     assert Article.objects.count() == 0
 
 
@@ -148,7 +148,7 @@ def test_article_detail_view_delete_not_author(
 @pytest.mark.django_db
 def test_article_detail_view_delete_unauthenticated(sample_article_db, client):
     response = client.delete(reverse(detail_url, kwargs={"pk": sample_article_db.id}))
-    assert response.status_code == status.HTTP_403_FORBIDDEN
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
 
 @pytest.mark.django_db
@@ -192,7 +192,7 @@ def test_article_detail_view_edit_unauthenticated(
         updated_artice,
         format="json",
     )
-    assert response.status_code == status.HTTP_403_FORBIDDEN
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
 
 @pytest.mark.django_db
